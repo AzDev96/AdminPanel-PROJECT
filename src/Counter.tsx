@@ -1,8 +1,8 @@
 import React from 'react'
-import "./index.scss";
+import styles from './button.module.scss'
 export  function Counter() {
   return (
-    <div className='conunter'>
+    <div className={styles.red}>
       Counter
     </div>
   )

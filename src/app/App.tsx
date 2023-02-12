@@ -5,6 +5,7 @@ import { useTheme } from "./providers/ThemeProvider";
 import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { classNames } from "shared/lib/classNames/classNames";
+import { AppRouter } from "./providers/router";
 
 
 function App() {
@@ -18,12 +19,7 @@ function App() {
       <li>
         <Link to={"/about"}>About</Link>
       </li>
-      <Suspense fallback={<div>... LOading</div>}>
-        <Routes>
-          <Route path={"/"} element={<MainPage/>} />
-          <Route path={"/about"} element={<AboutPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 }

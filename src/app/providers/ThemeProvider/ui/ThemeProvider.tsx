@@ -1,5 +1,5 @@
 import { useState, useMemo, FC } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "../lib/ThemeContext";
 
 // Если Локал Стореж пустой то по дефоулту он будет брать LIGTH
 const defaultTheme =

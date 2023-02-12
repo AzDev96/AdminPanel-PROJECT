@@ -6,20 +6,17 @@ import { AboutPage } from "pages/AboutPage";
 import { MainPage } from "pages/MainPage";
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/Navabar";
+
 
 
 function App() {
-  const {theme, toggleTheme} = useTheme()
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div className={classNames('app', {}, [theme])}>
-      <button onClick={toggleTheme}>TOGGLE</button>
-      <li>
-        <Link to={"/"}>Glavnaya</Link>
-      </li>
-      <li>
-        <Link to={"/about"}>About</Link>
-      </li>
+    <div className={classNames("app", {}, [theme])}>
+      <Navbar/>
       <AppRouter />
+      <button onClick={toggleTheme}>TOGGLE</button>
     </div>
   );
 }

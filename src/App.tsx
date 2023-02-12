@@ -1,15 +1,14 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import styles from "./button.module.scss";
-
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
 import { MainPageAsync } from "./pages/MainPage/MainPage.async";
-import "./index.scss";
+import { useTheme } from "./theme/useTheme";
+import "./styles/index.scss";
 function App() {
+  const {theme, toggleTheme} = useTheme()
   return (
-    <div>
-      Counter
-      <span className={styles.red}></span>
+    <div className={`app ${theme}`}>
+      <button onClick={toggleTheme}>TOGGLE</button>
       <li>
         <Link to={"/"}>Glavnaya</Link>
       </li>

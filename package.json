@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/AzDev96/UIBTV#readme",
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@types/node": "^18.11.18",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
@@ -27,6 +28,7 @@
     "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^6.7.3",
     "dom": "^0.0.3",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
     "sass": "^1.58.0",

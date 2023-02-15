@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/AzDev96/UIBTV#readme",
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@svgr/webpack": "^6.5.1",
     "@types/node": "^18.11.18",
     "@types/react": "^17.0.39",

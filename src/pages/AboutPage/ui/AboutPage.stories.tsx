@@ -13,7 +13,7 @@ export default {
   },
 } as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args as any} />;
+const Template: ComponentStory<typeof AboutPage> = (args: any) => <AboutPage {...args} />;
 
 /* ====== Light ====== */
 export const Light = Template.bind({});

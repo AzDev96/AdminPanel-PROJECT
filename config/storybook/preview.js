@@ -1,3 +1,9 @@
+import { addDecorator } from "@storybook/react"
+import { Theme } from "app/providers/ThemeProvider"
+import { RouterDecorator } from "shared/config/storybook/RouterDecorator/RouterDecorator"
+import { StylyDecorator } from "shared/config/storybook/StyleDecorator/StyleDecorator"
+import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator"
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -7,3 +13,7 @@ export const parameters = {
     },
   },
 }
+
+addDecorator(StylyDecorator)
+addDecorator(ThemeDecorator(Theme.LIGHT))
+addDecorator(RouterDecorator)

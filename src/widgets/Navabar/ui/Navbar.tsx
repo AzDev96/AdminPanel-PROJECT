@@ -11,11 +11,6 @@ interface NavbarProps {
 export function Navbar({ className }: NavbarProps) {
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
-  
-      <div className={cls.links}>
-        <Applink theme={AppLinkTheme.SECONDARY} className={cls.mainLink} to={"/"}>Glavnaya</Applink>
-        <Applink theme={AppLinkTheme.SECONDARY} to={"/about"}>About</Applink>
-      </div>
    
     </div>
   );

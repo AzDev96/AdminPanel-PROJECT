@@ -3,6 +3,7 @@ import cls from "./Sidebar.module.scss";
 import { useState } from "react";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LandSwitcher } from "widgets/LandSwitcher/LandSwitcher";
+import { Button, ThemeButton } from "shared/ui/Button/Button";
 interface SidebarProps {
   className?: string;
 }
@@ -19,7 +20,14 @@ export function Sidebar({ className }: SidebarProps) {
         className,
       ])}
     >
-      <button data-testid="sidebar-toggle" onClick={onToggle}>toggle</button>
+      <Button 
+        data-testid="sidebar-toggle" 
+        onClick={onToggle} 
+        className={cls.collapsedBtn}
+        theme={ThemeButton.BACKGROUND_INVERTED}
+      >
+         {collapsed ? ">" : "<"} 
+      </Button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
         <LandSwitcher className={cls.land}/>

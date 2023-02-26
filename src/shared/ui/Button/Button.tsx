@@ -4,19 +4,30 @@ import { classNames } from "shared/lib/classNames/classNames";
 
 export enum ThemeButton {
   CLEAR = "clear",
-  OUTLINE = 'outline'
+  OUTLINE = 'outline',
+  BACKGROUND = "background",
+
+  BACKGROUND_INVERTED = "backgroundInverted"
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   theme?: ThemeButton;
+  square?: boolean
+}
+
+const mods: Record<string, boolean> = {
+  [cls[theme]] : true,
+  [cls.square] : square
+
 }
 
 export const Button: FC<ButtonProps> = (props: ButtonProps) => {
-  const { className, children, theme, ...otherProps } = props;
+  const { className, children, theme, square, ...otherProps } = props;
   return (
     <button
-      className={classNames(cls.Button, {}, [className, cls[theme]])}
+     type="button"
+      className={classNames(cls.Button, mods, [className])}
       {...otherProps}
     >
       {children}

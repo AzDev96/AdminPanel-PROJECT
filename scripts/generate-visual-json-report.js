@@ -4,7 +4,7 @@ const { join: joinPath, relative } = require('path');
 
 const asyncReaddir = promisify(readdir);
 const writeFileAsync = promisify(writeFile);
-
+ 
 const lokiDir = joinPath(__dirname, '..', '.loki');
 const actualDir = joinPath(lokiDir, 'current');
 const expectedDir = joinPath(lokiDir, 'reference');

@@ -7,15 +7,15 @@ import { StoreProvider } from "app/providers/StoreProvider";
 import { ErrorBoundary } from "app/providers/ErrorBoundary";
 import "./app/styles/index.scss";
 render(
-<StoreProvider>
-<BrowserRouter>
-    <ErrorBoundary>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </ErrorBoundary>
-  </BrowserRouter>
-</StoreProvider>,  
-  
+  <StoreProvider>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </StoreProvider>,
+
   document.getElementById("root")
 );
